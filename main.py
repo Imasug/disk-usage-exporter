@@ -5,7 +5,7 @@ import argparse
 
 
 def get_disk_usage(path: Path) -> float:
-    return sum(p.stat().st_size for p in path.glob('**/*') if p.is_file())
+    return sum(p.stat().st_size for p in path.glob('**/*'))
 
 
 def get_metrics() -> None:
