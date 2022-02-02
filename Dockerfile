@@ -1,15 +1,10 @@
 FROM python
 
-RUN useradd -s /sbin/nologin app
-
-# TODO
 RUN pip install --upgrade pip
 
-WORKDIR /home/app
-COPY . .
-RUN chown -R app:app .
+COPY . /tmp/src
+WORKDIR /tmp/src
 
-USER app
 RUN make
 
 EXPOSE 9100
