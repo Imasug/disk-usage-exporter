@@ -33,7 +33,7 @@ if __name__ == '__main__':
         assert path.exists()
 
     disk_usage_gauge = Gauge('node_disk_usage_bytes',
-                             'Disk usage of the directory/file. Note that this is not synchronized. The value is scraped by own timer', ['path'])
+                             'Disk usage of the directory/file. Note that this is not synchronized. The value is scraped by own timer.', ['path'])
 
     start_http_server(9100)
 
